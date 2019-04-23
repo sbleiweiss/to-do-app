@@ -3,19 +3,30 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>To-Do App</title>
+
+    <!-- Material Design Lite  -->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!-- styles link -->
+    <link rel="stylesheet" href="styles/main.css">
+
   </head>
   <body>
-    <h1>To-Do App</h1>
 
-    <form id="addToDoForm"> <!--text area box-->
-      <label for="newToDoText">New To-Do:</label> <!-- to the left of the list item-->
-      <input type="text" id="newToDoText"> <!-- place to input new item-->
-      <button type="submit">Add To-Do!</button> <!-- button-->
+    <header class="mdl-layout__header mdl-layout">
+    <h1>To-Do App</h1>
+    </header>
+
+    <form class id="addToDoForm"> <!--text area box-->
+      <label class="mdl-textfield mdl-js-textfield">New To-Do:</label> <!-- to the left of the list item-->
+      <input class="mdl-textfield__input" type="text" id="newToDoText"> <!-- place to input new item-->
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Add To-Do!</button> <!-- button-->
     </form>
 
 <!--way to display the list of do-dos the to the user, using id to link it to js later-->
 
-    <ul id="toDoList">
+    <ul class="demo-list-icon mdl-list" type="list" id="toDoList">
     </ul>
 
 <script src="app.js"></script>  <!--link to js file-->

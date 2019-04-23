@@ -17,11 +17,21 @@ function onReady(){ // create onReady function for to-do app!
     // set the input's type to checkbox
     checkbox.type = "checkbox";
 
+    //delete button
+    let deleteBtn = document.createElement('button');
+    deleteBtn.textContent = "Delete";
+
+    deleteBtn.addEventListener('click', function(event){
+      toDoList.removeChild(this.parentElement); //this.parentElement represents the button's <li> parent
+    })
+
     // set the title
     newLi.textContent = title;
 
     // attach the checkbox to the li
     newLi.appendChild(checkbox);
+
+    newLi.appendChild(deleteBtn);
 
     // attach the li to the ul
     toDoList.appendChild(newLi);
@@ -31,6 +41,7 @@ function onReady(){ // create onReady function for to-do app!
 
   });
 }
+
 
 //property on the window called onload which is an *event handler* for the load event of window
 window.onload = function() {
